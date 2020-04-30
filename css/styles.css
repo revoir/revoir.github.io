@@ -24,3 +24,18 @@
     margin: 0px ;
     color: #0f0f0f;
 }
+/*@media (max-width: 576px){
+.hidden{
+    display: none;
+}
+}
+This is sample of working media query*/
+body{
+    padding: 50px 0px 50px 0px;
+    z-index: 0;
+}
+.navbar-dark {
+    background-color: #512DA8;
+}
+
+
