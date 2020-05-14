@@ -32,7 +32,8 @@
                 <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
             </ul>
             <span class="navbar-text">
-                <a data-toggle="modal" data-target="#loginModal">
+                <!--data-toggle="modal" data-target="#loginModal" were used for JS plugin for login-->
+                <a id="loginButton">
                 <span class="fa fa-sign-in"></span> Login</a>
             </span>
         </div>
@@ -166,8 +167,9 @@
                 </div>
                 
                 <div class="col-12 col-sm-3 align-self-center mt-3">
+                    <!--data-toggle="modal" data-target="#reserveModal" were used for JS Plugin in <a> TAG-->
                     <a type="button" class="btn btn-warning btn-sm btn-block" 
-                    data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+                    id="reserveButton">Reserve Table</a>
                   <!--comment for tootip display  <a role="button" class="btn btn-block nav-link btn-warning"
                     data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
                     data-placement="bottom" href="#reserveform">Reserve Table</a>
@@ -385,12 +387,13 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
     <!--script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script-->
-    <script>
+    <!--script>
        /*code for two different play/pause buttons working
         $(document).ready(function(){
             $("#mycarousel").carousel( { interval: 2000 } );
@@ -413,8 +416,16 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
-    </script>
-
+    $("#loginButton").click(function(){
+        $("#loginModal").modal('show');
+    });
+    
+    $("#reserveButton").click(function(){
+        $("#reserveModal").modal('show');
+    });
+    </script-->
+<!--npm install --save-dev onchange@3.3.0 parallelshell@3.0.2 where onchange is going to watch files in my project folder and whenevr those files change it will automatically trigger task to be executed-->
+<!--Ex:for scss it compiles everytime when something changes.Also can change watch module instead of onchange and parallelshell help to execute multiple script parallely on different shell.-->
 </body>
 
 </html>

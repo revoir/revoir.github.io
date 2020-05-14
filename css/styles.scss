@@ -1,4 +1,3 @@
-//scss variables
 $lt-gray: #ddd;
 $background-dark: #512DA8;
 $background-light: #9575CD;
@@ -26,7 +25,6 @@ $carousel-item-height: 300px;
     background-color: $background-pale;
     @include zero-margin(20px, 0px);
 }
-
 .jumbotron {
     @include zero-margin(70px,30px);
     background: $background-light ;
@@ -47,7 +45,6 @@ body{
 .navbar-dark {
      background-color: $background-dark;
 }
-
 .tab-content {
     border-left: 1px solid $lt-gray;
     border-right: 1px solid $lt-gray;
@@ -68,13 +65,27 @@ body{
         }
     }
 }
-
-#carouselButton {
+#carousel-button {
     right:0px;
     position: absolute;
     bottom: 0px;
-    z-index: 1;
 }
-//for scss run npm install --save-dev node-sass@4.7.2
-//after installing add  "scss": "node-sass -o css/ css/" in your package.json file after "lite": "lite-server"
-//now run npm run scss directly in cmd and it will compile your scss files to standard css file.
+
+.modal {    
+    
+    .modal-header {
+        background-color: $background-dark;
+        color:floralwhite;
+        button {
+            color:floralwhite;            
+        }
+    }
+
+    .modal-body {
+        background-color: $background-pale;
+    }
+
+    .modal-footer {
+        background: $background-light;
+    }
+}
