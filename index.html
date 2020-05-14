@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--for delivery to webserver,js and css files are combined into one js and one css file for reducing downloads on web server-->
+<!--so  
+    1.Clean out a folder using the clean NPM module.(npm install --save-dev rimraf@2.6.2)
+    2.Copy files from one folder to another.(npm -g install copyfiles@2.0.0)
+    3.Prepare a minified and concatenated css file from all the css files used in your project.
+    Compressing and Minifying Images-help us to compress our images to reduce the size of the images being used in our project(npm -g install imagemin-cli@3.0.0)
+    concatenate and combine all html files.(npm install --save-dev usemin-cli@0.5.1 cssmin@0.4.3 uglifyjs@2.4.11 htmlmin@0.0.7)
+    4.Prepare an uglified and concatenated JS file containing all the JS code used in your project
 
+-->
 <head>
      <!-- Required meta tags always come first -->
      <meta charset="utf-8">
@@ -8,11 +17,12 @@
      <meta http-equiv="x-ua-compatible" content="ie=edge">
  
      <!-- Bootstrap CSS -->
+     <!-- build:css css/main.css -->
      <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
      <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
      <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
      <link rel="stylesheet" href="css/styles.css">
-
+    <!-- endbuild -->
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -384,10 +394,12 @@
         </div>
     </footer>
          <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- endbuild -->
     <!--script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
